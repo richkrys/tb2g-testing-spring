@@ -101,6 +101,11 @@ public class MvcCoreConfig implements WebMvcConfigurer {
 		// details)
 		registry.addResourceHandler("/resources/**").addResourceLocations(
 				"/resources/");
+		
+		// adding for swagger
+	    registry.addResourceHandler("swagger-ui.html")
+	      .addResourceLocations("classpath:/META-INF/resources/");
+	 
 		// uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (Bootstrap, jQuery...)
 		registry.addResourceHandler("/webjars/**").addResourceLocations(
 				"classpath:/META-INF/resources/webjars/");
